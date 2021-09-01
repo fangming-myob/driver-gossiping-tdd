@@ -3,6 +3,8 @@
  */
 package com.tdd.gossiping
 
+import io.kotest.core.spec.style.WordSpec
+
 class GossipDriverSpec: WordSpec({
     "Gossip driver" should {
         "init finishGossip method" {
