@@ -18,5 +18,10 @@ class GossipDriverSpec : WordSpec({
             GossipDriver().finishGossip(roadMap) shouldBe "1"
         }
 
+        "return 1 when 2 drivers have different 1 route" {
+            val roadMap = listOf("1", "2")
+            GossipDriver().finishGossip(roadMap) shouldBe "never"
+        }
+
     }
 })
