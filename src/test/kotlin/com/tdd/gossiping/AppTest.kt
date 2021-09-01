@@ -3,12 +3,11 @@
  */
 package com.tdd.gossiping
 
-import kotlin.test.Test
-import kotlin.test.assertNotNull
-
-class AppTest {
-    @Test fun testAppHasAGreeting() {
-        val classUnderTest = App()
-        assertNotNull(classUnderTest.greeting, "app should have a greeting")
+class GossipDriverSpec: WordSpec({
+    "Gossip driver" should {
+        "init finishGossip method" {
+            val roadMap = listOf('1')
+            GossipDriver.finishGossip(roadMap).shouldBe 'never'
+        }
     }
-}
+})
