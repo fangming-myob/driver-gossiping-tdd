@@ -4,12 +4,13 @@
 package com.tdd.gossiping
 
 import io.kotest.core.spec.style.WordSpec
+import io.kotest.matchers.shouldBe
 
-class GossipDriverSpec: WordSpec({
+class GossipDriverSpec : WordSpec({
     "Gossip driver" should {
         "init finishGossip method" {
-            val roadMap = listOf('1')
-            GossipDriver.finishGossip(roadMap).shouldBe 'never'
+            val roadMap = listOf("1")
+            GossipDriver().finishGossip(roadMap) shouldBe "never"
         }
     }
 })
