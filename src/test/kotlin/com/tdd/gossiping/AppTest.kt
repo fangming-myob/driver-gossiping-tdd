@@ -32,5 +32,10 @@ class GossipDriverSpec : WordSpec({
             val roadMap = listOf("1 1", "1 2")
             GossipDriver().finishGossip(roadMap) shouldBe "1"
         }
+
+        "return 2 when 2 drivers meet in the 2nd stop" {
+            val roadMap = listOf("3 5", "5 5")
+            GossipDriver().finishGossip(roadMap) shouldBe "2"
+        }
     }
 })
