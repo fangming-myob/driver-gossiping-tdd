@@ -10,7 +10,7 @@ class GossipDriverSpec : WordSpec({
     "Gossip driver" should {
         "init finishGossip method" {
             val roadMap = listOf("1")
-            GossipDriver().finishGossip(roadMap) shouldBe "never"
+            GossipDriver().finishGossip(roadMap) shouldBe "1"
         }
 
         "return 1 when 2 drivers have same 1 route" {

@@ -2,12 +2,11 @@ package com.tdd.gossiping
 
 class GossipDriver {
     fun finishGossip(roadMaps: List<String>): String {
-        return if (roadMaps.size > 1) {
-            if (roadMaps.map { it[0] }.distinct().size == 1) "1"
-            else if (roadMaps[0].length > 1 && roadMaps.map { it[1] }.distinct().size == 1) "2"
-            else "never"
-        } else {
-            "never"
+        for (i in roadMaps[0].indices) {
+            if (roadMaps.map { it[i] }.distinct().size == 1) {
+                return (i + 1).toString()
+            }
         }
+        return "never"
     }
 }
